@@ -4,7 +4,7 @@ def write_shopping_list(items, filename):
     file=open(filename,"w")
     c=1
     for i in items:
-        file.write(f"{c}.{i}\n")
+        file.write(f"{c}. {i}\n")
         c=c+1
     file.close()
     pass
@@ -25,7 +25,11 @@ def read_names(filename):
 # Exercise 3
 def append_entry(filename, text):
     file=open(filename,"a")
+    c=0
     file.write(text+"\n")
+    for line in file:
+        c+=1
+    return c
     file.close()
     pass
 
@@ -37,8 +41,7 @@ def search_file(filename, word):
     c=0
     for line in file:
         c=c+1
-        line.lower()
-        if word in line:
+        if word in line.lower():
             lst.append(c)
     file.close()
     return lst
