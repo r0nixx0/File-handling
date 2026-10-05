@@ -57,10 +57,7 @@ def number_the_lines(source, destination):
     file.close()
     return c-1
     pass
-source="Test.txt"
-destination="shopping.txt"
 
-print(number_the_lines(source,destination))
 
 
 
