@@ -60,7 +60,3 @@ def number_the_lines(source, destination):
     file.close()
     return c-1
     pass
-
-
-
-
