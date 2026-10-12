@@ -24,28 +24,28 @@ def read_names(filename):
 
 # Exercise 3
 def append_entry(filename, text):
-    file=open(filename,"a")
-    c=0
-    file.write(text+"\n")
-    for line in file:
-        c+=1
-    return c
+    file = open(filename, "a")
+    file.write(text + "\n")
     file.close()
-    pass
 
+    file = open(filename, "r")
+    c = 0
+    for line in file:
+        c += 1
+    file.close()
+    return c
 
 # Exercise 4
 def search_file(filename, word):
-    file=open(filename,"r")
-    lst=[]
-    c=0
+    file = open(filename, "r")
+    lst = []
+    c = 0
     for line in file:
-        c=c+1
-        if word in line.lower():
+        c = c + 1
+        if word.lower() in line.lower():
             lst.append(c)
     file.close()
     return lst
-    pass
 
 # Exercise 5
 def number_the_lines(source, destination):
